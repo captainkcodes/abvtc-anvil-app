@@ -1,0 +1,33 @@
+container: {type: ColumnPanel}
+components:
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'VLDABF,EQUKSY'}
+  components:
+  - name: label_1
+    properties: {align: center, text: Come be social!, role: headline, font: Oswald,
+      font_size: 40}
+    type: Label
+    layout_properties: {grid_position: 'CLUDGM,PQEMKT'}
+  - name: discord
+    properties: {icon: ''}
+    type: Link
+    layout_properties: {grid_position: 'XAQYPM,WYUJIC'}
+  - name: facebook
+    properties: {}
+    type: Link
+    layout_properties: {grid_position: 'XAQYPM,WFZIUR'}
+  - name: twitter
+    properties: {text: ''}
+    type: Link
+    layout_properties: {grid_position: 'XAQYPM,EACTHY'}
+  - name: youtube
+    properties: {}
+    type: Link
+    layout_properties: {grid_position: 'XAQYPM,KKUERM'}
+  - name: instagram
+    properties: {}
+    type: Link
+    layout_properties: {grid_position: 'XAQYPM,VCKHXG'}
+is_package: true

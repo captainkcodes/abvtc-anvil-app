@@ -1,5 +1,7 @@
 from ._anvil_designer import HomeTemplate
 from anvil import *
+import stripe.checkout
+import anvil.server
 import anvil.facebook.auth
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
@@ -8,6 +10,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.users
 from ..Landing import Landing
+from ..Account import Account
 
 class Home(HomeTemplate):
   def __init__(self, **properties):
@@ -38,22 +41,21 @@ class Home(HomeTemplate):
       self.logout_btn.visible = True
       self.login_btn.visible = False
       self.viewacct_btn.visible = True
-      alert("Welcome back!", dismissible=True)
+      alert("Welcome back!")
     elif (anvil.users.EmailNotConfirmed()):
       Notification("Please come back when you confirm your email! Check your spam folders!!", style="info", timeout=4)
 
   def logout_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
     anvil.users.logout()
-    alert("Log out successful! See you soon.", dismissible=True)
-    user = anvil.users.get_user(allow_remembered=True)
-    if (user):
-      self.logout_btn.visible = False
-      self.login_btn.visible = True
-      self.viewacct_btn.visible = False
+    alert("Log out successful! See you soon.")
+    self.logout_btn.visible = False
+    self.login_btn.visible = True
+    self.viewacct_btn.visible = False
 
   def viewacct_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
+    self.container.clear()
     self.container.add_component(Account())
 
     

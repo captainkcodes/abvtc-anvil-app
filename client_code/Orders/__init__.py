@@ -1,5 +1,7 @@
-from ._anvil_designer import RowTemplate1Template
+from ._anvil_designer import OrdersTemplate
 from anvil import *
+import stripe.checkout
+import anvil.server
 import anvil.facebook.auth
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
@@ -9,7 +11,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class RowTemplate1(RowTemplate1Template):
+class Orders(OrdersTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
