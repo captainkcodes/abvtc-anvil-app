@@ -13,3 +13,17 @@ import anvil.server
 def getProductInfo():
   #returns data that clients can read but not modify
   return app_tables.products.client_readable()
+
+@anvil.server.callable
+def getUserInfo():
+  #returns data from user table
+  return app_tables.users.client_readable()
+
+@anvil.server.callable
+def updateUserInfo():
+  #returns data from user table and allows for updates
+  return app_tables.users.client_writable()
+
+@anvil.server.callable
+def getOrderInfo():
+  return app_tables.orders.client_readable()

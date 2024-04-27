@@ -69,9 +69,6 @@ db_schema:
     - name: name
       admin_ui: {width: 200, order: 1}
       type: string
-    - name: product
-      admin_ui: {width: 200, order: 2}
-      type: simpleObject
     - name: shippingAddress
       admin_ui: {width: 200, order: 3}
       type: string
@@ -87,6 +84,12 @@ db_schema:
     - name: orderShipped
       admin_ui: {width: 200, order: 7}
       type: bool
+    - name: product
+      admin_ui: {width: 200, order: 0.5}
+      type: string
+    - name: orderNumber
+      admin_ui: {width: 200, order: 0.25}
+      type: string
     title: Orders
   products:
     client: none

@@ -19,6 +19,16 @@ components:
     data_bindings:
     - {property: tag, code: 'self.item[''email'']', writeback: false}
     - {property: type, code: 'self.item[''email'']', writeback: false}
+  - name: label_2
+    properties: {text: 'Current Password:', font: Oswald, font_size: 20}
+    type: Label
+    layout_properties: {grid_position: 'DMPITF,LRHRBT'}
+  - name: pass_box
+    properties: {role: outlined, hide_text: true, font: Oswald, font_size: 20, enabled: false}
+    type: TextBox
+    layout_properties: {grid_position: 'DMPITF,DBAYDO'}
+    data_bindings:
+    - {property: tag, code: 'self.item[''password_hash'']', writeback: false}
   - name: label_3
     properties: {text: 'Need a change?', font: Oswald, font_size: 20}
     type: Label
@@ -42,6 +52,10 @@ components:
   properties: {role: outlined-card}
   type: ColumnPanel
   layout_properties: {grid_position: 'XAAUAC,EMGWQB'}
-  components: []
+  components:
+  - name: order1_box
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'JXFRBZ,WRKBDV'}
 is_package: true
 item_type: {table_id: 734006}
