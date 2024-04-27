@@ -12,8 +12,12 @@ from anvil.tables import app_tables
 
 
 class Product(ProductTemplate):
-  def __init__(self, **properties):
+  def __init__(self, variant, description, button_text, image, button_callback, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    self.prodname.text = variant
+    self.proddescription.text = description
+    self.buybtn.text = button_text
+    self.image_content.source = image
+    
     # Any code you write here will run before the form opens.

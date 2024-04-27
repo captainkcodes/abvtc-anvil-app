@@ -1,3 +1,31 @@
 container: {type: ColumnPanel}
-components: []
+components:
+- name: container
+  properties: {role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'XCLXOH,ZPREUM'}
+  components:
+  - name: prodname
+    properties: {text: product name, bold: false, font: Oswald, font_size: 20}
+    type: Label
+    layout_properties: {grid_position: 'EKWVJH,TGFVYD'}
+  - name: image_content
+    properties: {display_mode: shrink_to_fit, height: 316}
+    type: Image
+    layout_properties: {grid_position: 'XFPQPG,OYVRHN'}
+  - name: proddescription
+    properties: {text: description, font: Oswald, font_size: 18, align: center}
+    type: Label
+    layout_properties: {grid_position: 'NDGPOL,TSWAJF'}
+  - name: buybtn
+    properties: {text: '', role: filled-button, font_size: 20, font: Oswald, bold: true}
+    type: Button
+    layout_properties: {grid_position: 'IYPJNQ,UEKRJX'}
 is_package: true
+custom_component: true
+properties:
+- {name: variant, type: string, default_value: '', important: true, default_binding_prop: true}
+- {name: image, type: object, important: true, description: product image}
+- {name: button_callback, type: object, important: true, description: function to call when buying product}
+- {name: description, type: string, default_value: '', important: true, description: this is the product's description}
+- {name: button_text, type: string, default_value: '', important: true}

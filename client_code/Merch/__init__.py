@@ -9,7 +9,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-
+from ..Product import Product
 
 class Merch(MerchTemplate):
   def __init__(self, **properties):
@@ -23,4 +23,5 @@ class Merch(MerchTemplate):
     products = anvil.server.call('getProductInfo').search()
     
     for product in products:
-      print(product["variant"])
+      c = Product(variant=product['variant'], button_text=f"Purchase for ${product['retailPrice']}", description=product['description'], image=product['image'], button_callback=None)
+      self.container.add_component(c)

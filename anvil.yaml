@@ -104,5 +104,14 @@ db_schema:
     - name: image
       admin_ui: {width: 200, order: 3}
       type: media
+    - name: description
+      admin_ui: {width: 200, order: 4}
+      type: string
+    - name: color
+      admin_ui: {width: 200, order: 5}
+      type: simpleObject
+    - name: size
+      admin_ui: {width: 200, order: 6}
+      type: simpleObject
     title: Products
 renamed: true
