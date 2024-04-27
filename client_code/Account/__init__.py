@@ -35,4 +35,5 @@ class Account(AccountTemplate):
   def getOrders(self):
     order = anvil.server.call('getOrderInfo').search()
     for orders in order:
-      c = Orders(orders['email'], orders['product'], orders['name'], orders['orderShipped'], orders['orderNumber'])
+      c = Orders(orders['email'], orders['product'], orders['name'], orders['orderShipped'], orders['orderNumber'], orders['orderCreated'], orders['phoneNumber'])
+      self.ordercontainer.add_component(c)

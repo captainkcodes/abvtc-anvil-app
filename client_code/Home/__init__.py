@@ -22,6 +22,10 @@ class Home(HomeTemplate):
     self.container.add_component(Landing())
     self.logout_btn.visible = False
     self.viewacct_btn.visible = False
+    user = anvil.users.get_user(allow_remembered=True)
+    if user:
+      self.logout_btn.visible = True
+      self.viewacct_btn.visible = True
 
   def home_link_click(self, **event_args):
     """This method is called when the link is clicked"""

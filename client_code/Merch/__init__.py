@@ -25,7 +25,6 @@ class Merch(MerchTemplate):
     product_panel = GridPanel()
     for i, product in enumerate(products):
       c = Product(variant=product['variant'], button_text=f"Purchase for ${product['retailPrice']}", description=product['description'], image=product['image'], button_callback=None)
-      product_panel.remove_from_parent()
       product_panel.add_component(c, row=str(i//2), col_xs=6)
       self.container.add_component(product_panel)
       
