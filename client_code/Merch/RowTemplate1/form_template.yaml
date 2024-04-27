@@ -1,7 +1,0 @@
-is_package: true
-container:
-  type: DataRowPanel
-  data_bindings:
-  - {property: auto_display_data, code: 'self.item[''variant'']', writeback: false}
-  - {property: item, code: 'self.item[''variant'']', writeback: false}
-components: []

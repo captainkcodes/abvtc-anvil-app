@@ -20,5 +20,7 @@ class Merch(MerchTemplate):
     # Any code you write here will run before the form opens.
 
   def loadProducts(self):
-    products = anvil.server.call('getProductInfo')
-    print(products)
+    products = anvil.server.call('getProductInfo').search()
+    
+    for product in products:
+      print(product["variant"])

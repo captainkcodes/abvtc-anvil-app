@@ -1,7 +1,7 @@
-from ._anvil_designer import ItemTemplate1Template
+from ._anvil_designer import ProductTemplate
 from anvil import *
-import stripe.checkout
 import anvil.server
+import stripe.checkout
 import anvil.facebook.auth
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
@@ -11,7 +11,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class ItemTemplate1(ItemTemplate1Template):
+class Product(ProductTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
