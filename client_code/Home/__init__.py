@@ -36,7 +36,8 @@ class Home(HomeTemplate):
   def merch_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     self.container.clear()
-    open_form('Merch')
+    self.container.remove_from_parent()
+    self.container.add_component(Merch())
 
   def login_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
