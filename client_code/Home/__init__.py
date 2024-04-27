@@ -11,6 +11,9 @@ from anvil.tables import app_tables
 import anvil.users
 from ..Landing import Landing
 from ..Account import Account
+from ..Merch import Merch
+from ..Socials import Socials
+
 
 class Home(HomeTemplate):
   def __init__(self, **properties):
@@ -22,15 +25,18 @@ class Home(HomeTemplate):
 
   def home_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('Home')
+    self.container.clear()
+    self.container.add_component(Home())
 
   def social_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('Socials')
+    self.container.clear()
+    self.container.add_component(Socials())
 
   def merch_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('Merch')
+    self.container.clear()
+    self.container.add_component(Merch())
 
   def login_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
