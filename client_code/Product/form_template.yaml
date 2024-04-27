@@ -17,8 +17,27 @@ components:
     properties: {text: description, font: Oswald, font_size: 18, align: center}
     type: Label
     layout_properties: {grid_position: 'NDGPOL,TSWAJF'}
+  - name: prodsize
+    properties: {bold: true, font: Oswald, font_size: 18, text: 'Size:', align: right}
+    type: Label
+    layout_properties: {grid_position: 'GAUZMR,GCAADY'}
+  - name: sizedrop
+    properties: {}
+    type: DropDown
+    layout_properties: {grid_position: 'GAUZMR,TWDPFV'}
+    data_bindings: []
+  - name: prodcolor
+    properties: {font: Oswald, font_size: 18, text: 'Color:', align: right, bold: true,
+      role: null, spacing_above: small}
+    type: Label
+    layout_properties: {grid_position: 'GAUZMR,UWWRUP'}
+  - name: colordrop
+    properties: {align: full}
+    type: DropDown
+    layout_properties: {grid_position: 'GAUZMR,FNVLGU', full_width_row: false}
   - name: buybtn
-    properties: {text: '', role: filled-button, font_size: 20, font: Oswald, bold: true}
+    properties: {text: '', role: filled-button, font_size: 20, font: Oswald, bold: true,
+      spacing_above: medium}
     type: Button
     layout_properties: {grid_position: 'IYPJNQ,UEKRJX'}
 is_package: true
@@ -29,3 +48,5 @@ properties:
 - {name: button_callback, type: object, important: true, description: function to call when buying product}
 - {name: description, type: string, default_value: '', important: true, description: this is the product's description}
 - {name: button_text, type: string, default_value: '', important: true}
+- {name: size, type: string, default_value: '', important: true, description: size of the item}
+- {name: color, type: string, default_value: '', important: true, description: color of the item}
