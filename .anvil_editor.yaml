@@ -11,7 +11,16 @@ unique_ids:
   server_modules:
     Products: '1714093482758965876774603.3748'
   assets:
+    icons8-instagram-48.png: '1714262502410633410925375.3604'
+    icons8-twitch-48.png: '1714262520290283033329052.01373'
     Above-the-Clouds-1-30-2024.png: '1714086874762580289504951.381'
-    standard-page.html: AZGHV7JWTNTOYNBAHQ5YFUKGJZSNRFKG
     theme.css: YVKNQCOSP34FWATYYCDKJPVI4KIEWEMQ
+    icons8-youtube-24.png: '1714262487815269373627996.87726'
+    standard-page.html: AZGHV7JWTNTOYNBAHQ5YFUKGJZSNRFKG
+    icons8-facebook-24.png: '1714261870721744321268022.1765'
+    icons8-twitter-24.png: '1714262450219325060041117.5384'
+    icons8-tik-tok-48.png: '1714262531991434735813932.9858'
+    icons8-discord-24.png: '1714261824859747938542760.4673'
+    icons8-twitter-50.png: '1714262253010506460259570.2199'
+    png-transparent-discord-computer-icons-logo-smiley-decal-smiley-miscellaneous-blue-angle.png: '1714262016554220665005212.19656'
   scripts: {}

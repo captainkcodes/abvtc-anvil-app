@@ -16,11 +16,10 @@ class Account(AccountTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.getUserData()
+    self.getOrders()
     # Any code you write here will run before the form opens.
     
   def getUserData(self):
-    users = anvil.users.get_user(allow_remembered=True)
-    if users:
      user = anvil.server.call('getUserInfo').search()
      for userdata in user:
       self.email_box.text = userdata['email']
@@ -35,5 +34,5 @@ class Account(AccountTemplate):
   def getOrders(self):
     order = anvil.server.call('getOrderInfo').search()
     for orders in order:
-      c = Orders(orders['email'], orders['product'], orders['name'], orders['orderShipped'], orders['orderNumber'], orders['orderCreated'], orders['phoneNumber'])
+      c = Orders(ordemail=orders['email'], ordprod=orders['product'], ordname=orders['name'], ordship=orders['shippingAddress'], ordernum=orders['orderNumber'], ordcreated=orders['orderCreated'], ordphnum=orders['phoneNumber'], ordershipstat=orders['orderShipped'])
       self.ordercontainer.add_component(c)

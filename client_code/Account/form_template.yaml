@@ -3,7 +3,7 @@ container:
   properties: {role: outlined-card}
 components:
 - name: container
-  properties: {}
+  properties: {role: elevated-card}
   type: ColumnPanel
   layout_properties: {grid_position: 'LYYSTT,PSEVLT'}
   components:
@@ -33,11 +33,6 @@ components:
     properties: {text: 'Need a change?', font: Oswald, font_size: 20}
     type: Label
     layout_properties: {grid_position: 'RFPOYE,AOQUXS'}
-  - name: adduname_btn
-    properties: {text: Add Username, role: elevated-button, font: Oswald, font_size: 15,
-      bold: true, icon: 'fa:user-plus'}
-    type: Button
-    layout_properties: {grid_position: 'RFPOYE,MEUIMX'}
   - name: updateacct_btn
     properties: {text: Account Update, role: elevated-button, font: Oswald, font_size: 15,
       bold: true}
@@ -47,11 +42,15 @@ components:
   - name: spacer_1
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'ZDHVRU,UZEJTR'}
+    layout_properties: {grid_position: 'ZDHVRU,UZEJTR', full_width_row: false}
 - name: ordercontainer
-  properties: {role: outlined-card}
+  properties: {role: elevated-card}
   type: ColumnPanel
   layout_properties: {grid_position: 'XAAUAC,EMGWQB'}
-  components: []
+  components:
+  - name: label_4
+    properties: {bold: true, underline: true, text: Past Orders, font: Oswald, font_size: 20}
+    type: Label
+    layout_properties: {grid_position: 'HIZEOX,FHBWOP'}
 is_package: true
 item_type: {table_id: 734006}

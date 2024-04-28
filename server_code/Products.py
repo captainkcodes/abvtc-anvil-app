@@ -17,7 +17,9 @@ def getProductInfo():
 @anvil.server.callable
 def getUserInfo():
   #returns data from user table
-  return app_tables.users.client_readable()
+  user = anvil.users.get_user(allow_remembered=True)
+  if user:
+   return app_tables.users.client_readable()
 
 @anvil.server.callable
 def updateUserInfo():

@@ -26,6 +26,7 @@ class Home(HomeTemplate):
     if user:
       self.logout_btn.visible = True
       self.viewacct_btn.visible = True
+      self.login_btn.visible = False
 
   def home_link_click(self, **event_args):
     """This method is called when the link is clicked"""
