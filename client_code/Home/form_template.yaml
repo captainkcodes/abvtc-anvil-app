@@ -12,44 +12,33 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components:
+  - name: home_link
+    properties: {text: Home}
+    type: Link
+    event_bindings: {click: home_link_click}
+  - name: social_link
+    properties: {text: Socials}
+    type: Link
+    event_bindings: {click: social_link_click}
+  - name: merch_link
+    properties: {text: Merch}
+    type: Link
+    event_bindings: {click: merch_link_click}
+  - name: viewacct_btn
+    properties: {text: View Account, visible: true, role: elevated-button}
+    type: Button
+    event_bindings: {click: viewacct_btn_click}
+  - name: login_btn
+    properties: {text: Login, role: elevated-button, icon: 'fa:sign-in'}
+    type: Button
+    event_bindings: {click: login_btn_click}
+  - name: logout_btn
+    properties: {text: Log out, icon: 'fa:sign-out', role: elevated-button, visible: true}
+    type: Button
+    event_bindings: {click: logout_btn_click}
 - name: title
   properties: {text: Above the Clouds, font: Oswald, font_size: 35}
   type: Label
   layout_properties: {slot: title}
   data_bindings: []
-- name: sidebar
-  properties: {visible: true}
-  type: ColumnPanel
-  layout_properties: {slot: left-nav}
-  components:
-  - name: home_link
-    properties: {text: Home}
-    type: Link
-    layout_properties: {grid_position: 'MQHPXZ,OZLQOJ'}
-    event_bindings: {click: home_link_click}
-  - name: social_link
-    properties: {text: Socials}
-    type: Link
-    layout_properties: {grid_position: 'CUOAGR,QDBIUW'}
-    event_bindings: {click: social_link_click}
-  - name: merch_link
-    properties: {text: Merch}
-    type: Link
-    layout_properties: {grid_position: 'TQREHT,JZUXNH'}
-    event_bindings: {click: merch_link_click}
-  - name: viewacct_btn
-    properties: {text: View Account, visible: true, role: elevated-button}
-    type: Button
-    layout_properties: {grid_position: 'AAZIJC,DUMMPZ'}
-    event_bindings: {click: viewacct_btn_click}
-  - name: login_btn
-    properties: {text: Login, role: elevated-button, icon: 'fa:sign-in'}
-    type: Button
-    layout_properties: {grid_position: 'ANXIQV,FOUHIX'}
-    event_bindings: {click: login_btn_click}
-  - name: logout_btn
-    properties: {text: Log out, icon: 'fa:sign-out', role: elevated-button, visible: true}
-    type: Button
-    layout_properties: {grid_position: 'GYQEKM,RFMLZL'}
-    event_bindings: {click: logout_btn_click}
-  event_bindings: {}

@@ -16,32 +16,23 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
-- name: label_1
-  properties: {text: Merch, role: title, bold: false, font: Oswald, font_size: 40}
-  type: Label
-  layout_properties: {slot: title}
-- name: column_panel_1
-  properties: {}
-  type: ColumnPanel
-  layout_properties: {slot: left-nav}
   components:
   - name: link_1
     properties: {}
     type: Link
-    layout_properties: {grid_position: 'UUZEKL,FDYJRL'}
   - name: link_2
     properties: {}
     type: Link
-    layout_properties: {grid_position: 'SQNJOA,XSZPMI'}
   - name: button_1
     properties: {text: button_1}
     type: Button
-    layout_properties: {grid_position: 'JAPFFO,FBEBAJ'}
   - name: button_2
     properties: {text: button_2}
     type: Button
-    layout_properties: {grid_position: 'IBJNZM,CKWEEF'}
   - name: button_3
     properties: {text: button_3}
     type: Button
-    layout_properties: {grid_position: 'FQFOTU,LPRYHL'}
+- name: label_1
+  properties: {text: Merch, role: title, bold: false, font: Oswald, font_size: 40}
+  type: Label
+  layout_properties: {slot: title}

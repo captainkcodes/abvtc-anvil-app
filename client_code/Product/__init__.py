@@ -19,5 +19,13 @@ class Product(ProductTemplate):
     self.proddescription.text = description
     self.buybtn.text = button_text
     self.image_content.source = image
-    
+
+    self.getProdSizes()
     # Any code you write here will run before the form opens.
+
+  def getProdSizes(self):
+    sizes = anvil.server.call('getSize').search()
+    colors = anvil.server.call('getColor').search()
+    for row in sizes, colors:
+      self.sizedrop.items = sizes['size']
+      self.colordrop.items = colors['color']

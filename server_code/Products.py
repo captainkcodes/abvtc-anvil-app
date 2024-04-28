@@ -29,3 +29,11 @@ def updateUserInfo():
 @anvil.server.callable
 def getOrderInfo():
   return app_tables.orders.client_readable()
+  
+@anvil.server.callable
+def getColor():
+  return app_tables.colors.client_readable()
+
+@anvil.server.callable
+def getSize():
+  return app_tables.sizes.client_readable()
