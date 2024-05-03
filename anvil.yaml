@@ -110,25 +110,11 @@ db_schema:
     - name: description
       admin_ui: {width: 200, order: 4}
       type: string
-    title: Products
-  colors:
-    client: none
-    server: full
-    columns:
-    - name: color
-      admin_ui: {width: 200, order: 0}
-      type: string
     - name: size
-      admin_ui: {width: 200, order: 1}
+      admin_ui: {width: 200, order: 5}
       type: string
-    title: Colors
-  sizes:
-    client: none
-    server: full
-    columns:
-    - name: sizes
-      admin_ui: {width: 200, order: 0}
-      type: link_single
-      target: colors
-    title: Sizes
+    - name: color
+      admin_ui: {width: 200, order: 6}
+      type: string
+    title: Products
 renamed: true

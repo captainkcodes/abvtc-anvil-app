@@ -12,20 +12,14 @@ from anvil.tables import app_tables
 
 
 class Product(ProductTemplate):
-  def __init__(self, variant, description, button_text, image, button_callback, **properties):
+  def __init__(self, variant, description, button_text, image, button_callback, size, color, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.prodname.text = variant
     self.proddescription.text = description
     self.buybtn.text = button_text
     self.image_content.source = image
+    self.color_box.text = color
+    self.size_box.text = size
 
-    self.getProdSizes()
     # Any code you write here will run before the form opens.
-
-  def getProdSizes(self):
-    sizes = anvil.server.call('getSize').search()
-    colors = anvil.server.call('getColor').search()
-    for row in sizes, colors:
-      self.sizedrop.items = sizes['size']
-      self.colordrop.items = colors['color']

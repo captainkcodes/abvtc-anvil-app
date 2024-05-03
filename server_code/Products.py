@@ -26,14 +26,6 @@ def updateUserInfo():
   #returns data from user table and allows for updates
   return app_tables.users.client_writable()
 
-@anvil.server.callable
+@anvil.server.callable(require_user=True)
 def getOrderInfo():
   return app_tables.orders.client_readable()
-  
-@anvil.server.callable
-def getColor():
-  return app_tables.colors.client_readable()
-
-@anvil.server.callable
-def getSize():
-  return app_tables.sizes.client_readable()

@@ -17,21 +17,31 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
   components:
-  - name: link_1
-    properties: {}
+  - name: home_link
+    properties: {text: Home}
     type: Link
-  - name: link_2
-    properties: {}
+    layout_properties: {}
+    event_bindings: {click: home_link_click}
+  - name: social_link
+    properties: {text: Socials}
     type: Link
-  - name: button_1
-    properties: {text: button_1}
+    layout_properties: {}
+    event_bindings: {click: social_link_click}
+  - name: viewacct_btn
+    properties: {text: VIew Account, role: elevated-button}
     type: Button
-  - name: button_2
-    properties: {text: button_2}
+    layout_properties: {}
+    event_bindings: {click: viewacct_btn_click}
+  - name: login_btn
+    properties: {text: Login, role: elevated-button, icon: 'fa:sign-in'}
     type: Button
-  - name: button_3
-    properties: {text: button_3}
+    layout_properties: {}
+    event_bindings: {click: login_btn_click}
+  - name: logout_btn
+    properties: {text: Log Out, role: elevated-button, icon: 'fa:sign-out'}
     type: Button
+    layout_properties: {}
+    event_bindings: {click: logout_btn_click}
 - name: label_1
   properties: {text: Merch, role: title, bold: false, font: Oswald, font_size: 40}
   type: Label
