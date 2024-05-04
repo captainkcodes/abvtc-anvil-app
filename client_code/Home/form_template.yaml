@@ -29,6 +29,7 @@ components:
     properties: {text: View Account, visible: true, role: elevated-button}
     type: Button
     event_bindings: {click: viewacct_btn_click}
+    layout_properties: {}
   - name: login_btn
     properties: {text: Login, role: elevated-button, icon: 'fa:sign-in'}
     type: Button
