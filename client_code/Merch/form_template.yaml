@@ -1,44 +1,7 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+container: {type: ColumnPanel}
 components:
-- type: ColumnPanel
-  properties: {}
-  name: container
-  layout_properties: {slot: default}
-  components: []
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
-  components:
-  - name: home_link
-    properties: {text: Home}
-    type: Link
-    layout_properties: {}
-    event_bindings: {click: home_link_click}
-  - name: social_link
-    properties: {text: Socials}
-    type: Link
-    layout_properties: {}
-    event_bindings: {click: social_link_click}
-  - name: viewacct_btn
-    properties: {text: VIew Account, role: elevated-button}
-    type: Button
-    layout_properties: {}
-    event_bindings: {click: viewacct_btn_click}
-  - name: login_btn
-    properties: {text: Login, role: elevated-button, icon: 'fa:sign-in'}
-    type: Button
-    layout_properties: {}
-    event_bindings: {click: login_btn_click}
-  - name: logout_btn
-    properties: {text: Log Out, role: elevated-button, icon: 'fa:sign-out'}
-    type: Button
-    layout_properties: {}
-    event_bindings: {click: logout_btn_click}
-- name: label_1
-  properties: {text: Merch, role: title, bold: false, font: Oswald, font_size: 40}
-  type: Label
-  layout_properties: {slot: title}
+- name: container
+  properties: {col_spacing: medium, role: null}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'ADRKOJ,SILWTH', full_width_row: true, row_background: ''}
+is_package: true

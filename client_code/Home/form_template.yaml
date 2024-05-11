@@ -1,7 +1,7 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: '@theme:standard-page.html', role: null}
 components:
 - type: ColumnPanel
   properties: {col_widths: '{}'}
@@ -25,21 +25,8 @@ components:
     properties: {text: Merch}
     type: Link
     event_bindings: {click: merch_link_click}
-  - name: viewacct_btn
-    properties: {text: View Account, visible: true, role: elevated-button}
-    type: Button
-    event_bindings: {click: viewacct_btn_click}
-    layout_properties: {}
-  - name: login_btn
-    properties: {text: Login, role: elevated-button, icon: 'fa:sign-in'}
-    type: Button
-    event_bindings: {click: login_btn_click}
-  - name: logout_btn
-    properties: {text: Log out, icon: 'fa:sign-out', role: elevated-button, visible: true}
-    type: Button
-    event_bindings: {click: logout_btn_click}
 - name: title
-  properties: {text: Above the Clouds, font: Oswald, font_size: 35}
+  properties: {text: Above the Clouds, font: '', font_size: 35}
   type: Label
   layout_properties: {slot: title}
   data_bindings: []

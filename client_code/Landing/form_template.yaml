@@ -11,7 +11,7 @@ components:
     layout_properties: {grid_position: 'FKDLWS,ZMZKTV'}
   - name: rich_text_1
     properties: {content: 'Welcome to Above the Clouds! View our latest video below:',
-      align: center, font: Oswald, font_size: 25}
+      align: center, font: '', font_size: 25}
     type: RichText
     layout_properties: {grid_position: 'LFDBRB,BGPCBV'}
   - name: youtube_video_1
