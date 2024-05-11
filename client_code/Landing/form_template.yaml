@@ -19,8 +19,4 @@ components:
     type: YouTubeVideo
     layout_properties: {grid_position: 'YSJOSW,UWWXVL'}
     event_bindings: {}
-  - name: label_1
-    properties: {text: 'Future Streams/Events:', align: center, font_size: 25, font: Oswald}
-    type: Label
-    layout_properties: {grid_position: 'INIWZE,UUZNLE'}
 is_package: true

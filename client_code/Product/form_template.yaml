@@ -1,9 +1,9 @@
 container: {type: ColumnPanel}
 components:
 - name: container
-  properties: {role: elevated-card}
+  properties: {role: elevated-card, col_spacing: small}
   type: ColumnPanel
-  layout_properties: {grid_position: 'XCLXOH,ZPREUM'}
+  layout_properties: {grid_position: 'XCLXOH,ZPREUM', full_width_row: true}
   components:
   - name: prodname
     properties: {text: product name, bold: false, font: Oswald, font_size: 20}
@@ -24,7 +24,7 @@ components:
   - name: size_box
     properties: {enabled: false, role: outlined}
     type: TextBox
-    layout_properties: {grid_position: 'GAUZMR,FBHZVT'}
+    layout_properties: {grid_position: 'GAUZMR,FBHZVT', full_width_row: true}
   - name: spacer_1
     properties: {height: 32}
     type: Spacer
@@ -37,7 +37,7 @@ components:
   - name: color_box
     properties: {enabled: false, role: outlined, auto_expand: true}
     type: TextArea
-    layout_properties: {grid_position: 'GAUZMR,SDXOFL'}
+    layout_properties: {grid_position: 'GAUZMR,SDXOFL', full_width_row: true}
   - name: buybtn
     properties: {text: '', role: filled-button, font_size: 20, font: Oswald, bold: true,
       spacing_above: medium}
