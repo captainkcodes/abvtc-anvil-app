@@ -6,20 +6,17 @@ components:
   layout_properties: {grid_position: 'GPKGSK,WXXPGC'}
   components:
   - name: image_1
-    properties: {height: 534, display_mode: fill_width, source: _/theme/Above-the-Clouds-1-30-2024.png}
+    properties: {height: '524', display_mode: fill_width, source: _/theme/Above-the-Clouds-1-30-2024.png}
     type: Image
     layout_properties: {grid_position: 'FKDLWS,ZMZKTV'}
   - name: rich_text_1
     properties: {content: 'Welcome to Above the Clouds! View our latest video below:',
-      align: center, font: Oswald, font_size: 25}
+      align: center, font: '', font_size: 25}
     type: RichText
     layout_properties: {grid_position: 'LFDBRB,BGPCBV'}
   - name: youtube_video_1
-    properties: {youtube_id: 'https://www.youtube.com/live/MWAMpqCVSB4?si=HBg6lVxCPyspIYCk'}
+    properties: {youtube_id: YkJL53PPeSA, role: null, autoplay: true, height: '475'}
     type: YouTubeVideo
     layout_properties: {grid_position: 'YSJOSW,UWWXVL'}
-  - name: label_1
-    properties: {text: 'Future Streams/Events:', align: center, font_size: 25, font: Oswald}
-    type: Label
-    layout_properties: {grid_position: 'INIWZE,UUZNLE'}
+    event_bindings: {}
 is_package: true

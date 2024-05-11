@@ -6,28 +6,94 @@ components:
   layout_properties: {grid_position: 'VLDABF,EQUKSY'}
   components:
   - name: label_1
-    properties: {align: center, text: Come be social!, role: headline, font: Oswald,
-      font_size: 40}
+    properties: {align: center, text: Come be social!, role: headline, font: '', font_size: 40,
+      bold: false}
     type: Label
     layout_properties: {grid_position: 'CLUDGM,PQEMKT'}
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'EDVWHU,TIPSQY'}
+  - name: image_1
+    properties: {role: null, source: _/theme/icons8-discord-24.png, display_mode: original_size,
+      height: '37', spacing_above: none, alt_text: discord}
+    type: Image
+    layout_properties: {grid_position: 'ZEALYE,LDJAUC', full_width_row: false}
+    data_bindings: []
+  - name: image_2
+    properties: {source: _/theme/icons8-facebook-24.png, display_mode: original_size,
+      height: 36}
+    type: Image
+    layout_properties: {grid_position: 'ZEALYE,ZLLIQN'}
+  - name: image_3
+    properties: {source: _/theme/icons8-twitter-24.png, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'ZEALYE,INYIDU'}
+  - name: image_4
+    properties: {source: _/theme/icons8-youtube-24.png, display_mode: original_size,
+      height: 58}
+    type: Image
+    layout_properties: {grid_position: 'ZEALYE,KVGKYB'}
+  - name: image_5
+    properties: {source: _/theme/icons8-instagram-48.png, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'ZEALYE,OSXURK'}
+  - name: image_6
+    properties: {display_mode: original_size, source: _/theme/icons8-twitch-48.png}
+    type: Image
+    layout_properties: {grid_position: 'ZEALYE,LBMDPP'}
+  - name: image_7
+    properties: {display_mode: original_size, source: _/theme/icons8-tik-tok-48.png}
+    type: Image
+    layout_properties: {grid_position: 'ZEALYE,LHOCPQ'}
   - name: discord
-    properties: {icon: ''}
+    properties: {role: null, url: 'https://discord.gg/j4XKmdrnk7', align: center,
+      text: Discord, font_size: 18, font: '', col_spacing: medium, spacing_above: none,
+      spacing_below: none, bold: true, icon: ''}
     type: Link
-    layout_properties: {grid_position: 'XAQYPM,WYUJIC'}
+    layout_properties: {grid_position: 'XAQYPM,WYUJIC', full_width_row: false}
   - name: facebook
-    properties: {}
+    properties: {url: 'https://www.google.com/url?q=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100090380965169&sa=D&sntz=1&usg=AOvVaw2IBCOaqNPs23Zge9u88yKx',
+      align: center, bold: true, font: '', font_size: 18, text: Facebook, spacing_above: none,
+      spacing_below: none}
     type: Link
     layout_properties: {grid_position: 'XAQYPM,WFZIUR'}
   - name: twitter
-    properties: {text: ''}
+    properties: {text: Twitter/X, spacing_above: none, spacing_below: none, url: 'https://www.google.com/url?q=https%3A%2F%2Ftwitter.com%2FAbvtcYT&sa=D&sntz=1&usg=AOvVaw1Fxn1XuOgJP8wKOLCtzTOC',
+      align: center, bold: true, font: '', font_size: 18}
     type: Link
     layout_properties: {grid_position: 'XAQYPM,EACTHY'}
   - name: youtube
-    properties: {}
+    properties: {text: YouTube, spacing_above: none, spacing_below: none, url: 'https://www.youtube.com/@ABVTC/videos',
+      align: center, bold: true, font: '', font_size: 18}
     type: Link
     layout_properties: {grid_position: 'XAQYPM,KKUERM'}
   - name: instagram
-    properties: {}
+    properties: {text: Instagram, spacing_above: none, spacing_below: none, url: 'https://www.google.com/url?q=https%3A%2F%2Fwww.instagram.com%2Fabovethecloudsyt%2F&sa=D&sntz=1&usg=AOvVaw0xYDe8aTvSvmqwNqJ15UlP',
+      align: center, bold: true, font: '', font_size: 18}
     type: Link
     layout_properties: {grid_position: 'XAQYPM,VCKHXG'}
+  - name: twitch
+    properties: {text: Twitch, spacing_above: none, spacing_below: none, url: 'https://www.twitch.tv/abvthecloudsttv',
+      align: center, bold: true, font: '', font_size: 18}
+    type: Link
+    layout_properties: {grid_position: 'XAQYPM,PMTPVL'}
+  - name: tiktok
+    properties: {text: TikTok, spacing_above: none, spacing_below: none, url: 'https://www.google.com/url?q=https%3A%2F%2Fwww.tiktok.com%2F%40abovethecloudsyt%3Flang%3Den&sa=D&sntz=1&usg=AOvVaw1y7ViZVb-aJxPhkBUwKcOR',
+      align: center, bold: true, font: '', font_size: 18}
+    type: Link
+    layout_properties: {grid_position: 'XAQYPM,POVALF'}
+  - name: spacer_9
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'QQAUJZ,XIHBRC'}
+  - name: label_2
+    properties: {text: 'Future Streams/Events:', role: headline, align: center, bold: false,
+      underline: false, font_size: 30, font: ''}
+    type: Label
+    layout_properties: {grid_position: 'GDCSOW,NZZWPE', full_width_row: false}
+  - name: calcontainer
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'NVZDLG,XNAYUN'}
 is_package: true
