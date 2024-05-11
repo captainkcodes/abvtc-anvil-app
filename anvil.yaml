@@ -19,11 +19,13 @@ services:
   server_config: {refresh_token: rt_PzdxH4TiFs9dQsyNEnUiQjU6MbGufKKotkXjhE2mtyWE72ch,
     stripe_user_id: acct_1P9eaGKNytG3GFGj}
 startup: {type: form, module: Home}
-package_name: M3_App_1
+package_name: Above_the_Clouds
 allow_embedding: false
-name: M3 App 1
+name: Above the Clouds
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
+metadata: {title: Abvtc Home, description: The *new* official home for Above the Clouds,
+  logo_img: 'https://img.icons8.com/quill/100/cloud--v2.png'}
 startup_form: null
 native_deps: {head_html: "<style>\n  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');\n\
     \  *{\n    font-family: \"Noto Sans Mono\", monospace;\n  }\n</style>"}
