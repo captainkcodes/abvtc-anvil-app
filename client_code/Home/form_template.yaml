@@ -25,6 +25,11 @@ components:
     properties: {text: Merch}
     type: Link
     event_bindings: {click: merch_link_click}
+  - name: contact_link
+    properties: {text: Contact Us}
+    type: Link
+    layout_properties: {}
+    event_bindings: {click: contact_link_click}
 - name: title
   properties: {text: Above the Clouds, font: '', font_size: 35}
   type: Label

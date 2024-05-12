@@ -10,7 +10,7 @@ services:
   server_config: {user_table: users}
 - source: /runtime/services/google.yml
   client_config: {}
-  server_config: {}
+  server_config: {enc_delegation_refresh_token: RCwjmea2ljFV1r9ZA0joGWUfHElvumBvp5UnKDknguu1R0LgW7vZbSLwTNkHOmOzoJhB+BoLIBFam+IotE6aFMNHLnlHkMyNcwyZqMb3razt1ilkArvA5m8Q4bfTuYU56r6ieH7P6aCnO+lMwIx6ZN2k6U6A1hRPUFPZVG26lRxsl1l68Hs1PBfhAcyS04dIp4mEYREZhvQTFSXPYDP3jy4xK7OPOZK6CtrtnQqtu1GyYPujn2hsgCHdh72DMdmeh6V714XTa1SAFFTvUmzmVJPfyW5BHtnnoSJkiwPE1kci1iTXDGnQ4bY+Ma2rEg==}
 - source: /runtime/services/facebook.yml
   client_config: {}
   server_config: {}
@@ -29,5 +29,22 @@ metadata: {title: Abvtc Home, description: The *new* official home for Above the
 startup_form: null
 native_deps: {head_html: "<style>\n  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');\n\
     \  *{\n    font-family: \"Noto Sans Mono\", monospace;\n  }\n</style>"}
-db_schema: {}
+db_schema:
+  feedback:
+    client: none
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: email
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: feedback
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: created
+      admin_ui: {width: 200, order: 3}
+      type: datetime
+    title: feedback
 renamed: true

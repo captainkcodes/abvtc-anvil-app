@@ -8,15 +8,31 @@ components:
   - name: image_1
     properties: {height: '524', display_mode: fill_width, source: _/theme/Above-the-Clouds-1-30-2024.png}
     type: Image
-    layout_properties: {grid_position: 'FKDLWS,ZMZKTV'}
+    layout_properties: {grid_position: 'XWBBTL,SPXIGF'}
   - name: rich_text_1
     properties: {content: 'Welcome to Above the Clouds! View our latest video below:',
       align: center, font: '', font_size: 25}
     type: RichText
     layout_properties: {grid_position: 'LFDBRB,BGPCBV'}
-  - name: youtube_video_1
-    properties: {youtube_id: YkJL53PPeSA, role: null, autoplay: true, height: '475'}
-    type: YouTubeVideo
-    layout_properties: {grid_position: 'YSJOSW,UWWXVL'}
-    event_bindings: {}
+  - name: latestvidcontainer
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'UYKUWH,ONTCTE'}
+  - name: label_1
+    properties: {text: 'Watch these next:', role: headline, font_size: 25, bold: false,
+      align: center}
+    type: Label
+    layout_properties: {grid_position: 'EDYLPJ,THFBNV'}
+  - name: nxtvid1container
+    properties: {col_spacing: medium}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'QUXAAP,UBGVCQ', full_width_row: true}
+  - name: nxtvid2container
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'HQLJIQ,ZOIPFZ'}
+  - name: nxtvid3container
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'XMSTYU,MOZPXI'}
 is_package: true
