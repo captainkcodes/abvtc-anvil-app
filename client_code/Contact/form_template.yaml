@@ -11,7 +11,7 @@ components:
     layout_properties: {grid_position: 'OYVXIH,LBBSRY'}
     components:
     - name: label_1
-      properties: {text: Contact Us}
+      properties: {text: Contact Us, bold: true}
       type: Label
       layout_properties: {grid_position: 'KQXTRG,PZZXIW'}
     - name: label_2
@@ -34,7 +34,7 @@ components:
       properties: {text: 'Concern:'}
       type: Label
       layout_properties: {grid_position: 'HCCIMG,WJHGCS'}
-    - name: feedback_box
+    - name: comment_box
       properties: {role: outlined}
       type: TextArea
       layout_properties: {grid_position: 'HXAMZM,UFVTGV'}
@@ -42,4 +42,5 @@ components:
       properties: {text: Submit, role: filled-button}
       type: Button
       layout_properties: {grid_position: 'DMYSZA,YFIUXV'}
+      event_bindings: {click: submit_button_click}
 is_package: true

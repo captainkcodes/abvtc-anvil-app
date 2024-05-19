@@ -19,18 +19,16 @@ class Contact(ContactTemplate):
     # Any code you write here will run before the form opens.
 
   def submit_button_click(self, **event_args):
-    #Set 'name' to the text in the 'name_box'
+    """This method is called when the button is clicked"""
     name = self.name_box.text
-    #set 'email' to the text in the 'email_box'
     email = self.email_box.text
-    #set 'feedback' to the text in the 'feedback_box'
-    feedback = self.feedback_box.text
-    anvil.server.call('send_feedback', name, email, feedback)
-    Notification("Feedback submitted!").show()
+    comment = self.comment_box.text
+    anvil.server.call('send_feedback', name, email, comment)
+    Notification("Comment submitted!").show()
     self.clear_inputs()
 
+
   def clear_inputs(self):
-    #clear our three text boxes
     self.name_box.text = ""
     self.email_box.text = ""
-    self.feedback_box.text = ""
+    self.comment_box.text = ""

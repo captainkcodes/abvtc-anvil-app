@@ -1,3 +1,4 @@
+import anvil.email
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
@@ -22,22 +23,21 @@ from datetime import datetime
 #   return 42
 #
 @anvil.server.callable
-def send_feedback(name, email, feedback):
-  #Send yourself an email each time feedback is submitted
-  anvil.email.send(to="idasha.glenn7@gmail.com", 
-                   subject=f"Feedback from {name}", 
-                   text=f"""
-  A new person has filled out the feedback form!
+def send_feedback(name, email, comment):
+  #send yourself an email each time a comment is submitted
+  anvil.email.send(from_name="Abvtc Support", to="idasha.glenn7@gmail.com", subject=f"Comment from {name}", text=f"""
+  
+  A new person has submitted a comment in the contact us form!
   
   Name: {name}
   Email address: {email}
-  Feedback:
-  {feedback}
+  Comment:
+  {comment}
   """)
-
-  app_tables.feedback.send_row(
+  app_tables.comments.add_row(
     name=name,
     email=email,
-    feedback=feedback,
+    comment=comment,
     created=datetime.now()
   )
+
