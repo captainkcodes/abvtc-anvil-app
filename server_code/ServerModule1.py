@@ -25,7 +25,7 @@ from datetime import datetime
 @anvil.server.callable
 def send_feedback(name, email, comment):
   #send yourself an email each time a comment is submitted
-  anvil.email.send(from_name="Abvtc Support", to="idasha.glenn7@gmail.com", subject=f"Comment from {name}", text=f"""
+  anvil.email.send(from_name="Abvtc Support", to="real.abovetheclouds@gmail.com", subject=f"Comment from {name}", text=f"""
   
   A new person has submitted a comment in the contact us form!
   
