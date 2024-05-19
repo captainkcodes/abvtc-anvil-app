@@ -2,22 +2,12 @@ dependencies: []
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
-  server_config: {}
+  server_config: {auto_create_missing_columns: true}
 - source: /runtime/services/anvil/users.yml
   client_config: {require_secure_passwords: true, share_login_status: true, use_email: true,
     allow_remember_me: true, allow_signup: true, enable_automatically: true, confirm_email: true,
     remember_me_days: 30, use_google: true, use_facebook: true}
   server_config: {user_table: users}
-- source: /runtime/services/google.yml
-  client_config: {}
-  server_config: {enc_delegation_refresh_token: RCwjmea2ljFV1r9ZA0joGWUfHElvumBvp5UnKDknguu1R0LgW7vZbSLwTNkHOmOzoJhB+BoLIBFam+IotE6aFMNHLnlHkMyNcwyZqMb3razt1ilkArvA5m8Q4bfTuYU56r6ieH7P6aCnO+lMwIx6ZN2k6U6A1hRPUFPZVG26lRxsl1l68Hs1PBfhAcyS04dIp4mEYREZhvQTFSXPYDP3jy4xK7OPOZK6CtrtnQqtu1GyYPujn2hsgCHdh72DMdmeh6V714XTa1SAFFTvUmzmVJPfyW5BHtnnoSJkiwPE1kci1iTXDGnQ4bY+Ma2rEg==}
-- source: /runtime/services/facebook.yml
-  client_config: {}
-  server_config: {}
-- source: /runtime/services/stripe.yml
-  client_config: {live_mode: false}
-  server_config: {refresh_token: rt_PzdxH4TiFs9dQsyNEnUiQjU6MbGufKKotkXjhE2mtyWE72ch,
-    stripe_user_id: acct_1P9eaGKNytG3GFGj}
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {custom_smtp: false}
