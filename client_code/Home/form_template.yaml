@@ -61,3 +61,4 @@ components:
       background: '', bold: false, underline: false, icon: ''}
     name: viewacctbtn
     layout_properties: {grid_position: 'ZNFTOC,EHAJTU'}
+    event_bindings: {click: viewacctbtn_click}

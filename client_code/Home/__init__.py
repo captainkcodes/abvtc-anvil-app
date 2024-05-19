@@ -9,12 +9,15 @@ from ..Landing import Landing
 from ..Merch import Merch
 from ..Socials import Socials
 from ..Contact import Contact
+from ..Profile import Profile
 
 class Home(HomeTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.container.add_component(Landing())
+    self.logoutbtn.visible = False
+    self.viewacctbtn.visible = False
 
   def home_link_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -35,3 +38,8 @@ class Home(HomeTemplate):
     """This method is called when the link is clicked"""
     self.container.clear()
     self.container.add_component(Contact())
+
+  def viewacctbtn_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.container.clear()
+    self.container.add_component(Profile())
