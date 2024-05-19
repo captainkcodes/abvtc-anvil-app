@@ -35,3 +35,29 @@ components:
   type: Label
   layout_properties: {slot: title}
   data_bindings: []
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: sidebar
+  layout_properties: {slot: left-nav}
+  components:
+  - type: Button
+    properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Login, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: loginbtn
+    layout_properties: {grid_position: 'GPZZVO,MRHPDK'}
+  - type: Button
+    properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Logout, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: logoutbtn
+    layout_properties: {grid_position: 'AQRNRM,RMXQAE'}
+  - type: Button
+    properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: View Account, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: viewacctbtn
+    layout_properties: {grid_position: 'ZNFTOC,EHAJTU'}

@@ -1,13 +1,15 @@
+correct_dependency_ids: {}
 dependencies: []
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {auto_create_missing_columns: true}
 - source: /runtime/services/anvil/users.yml
-  client_config: {require_secure_passwords: true, share_login_status: true, use_email: true,
-    allow_remember_me: true, allow_signup: true, enable_automatically: true, confirm_email: true,
-    remember_me_days: 30, use_google: true, use_facebook: true}
-  server_config: {user_table: users}
+  client_config: {email_from_address: real.abovetheclouds@gmail.com, require_secure_passwords: true,
+    share_login_status: true, use_email: true, allow_remember_me: true, allow_signup: true,
+    enable_automatically: true, confirm_email: true, remember_me_days: 30, use_google: true,
+    use_facebook: true}
+  server_config: {}
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {custom_smtp: false}
@@ -19,25 +21,25 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
   server_spec: null}
 metadata: {title: Abvtc Home, description: The *new* official home for Above the Clouds,
   logo_img: 'https://img.icons8.com/quill/100/cloud--v2.png'}
-startup_form: null
+startup_form: Contact
 native_deps: {head_html: "<style>\n  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');\n\
     \  *{\n    font-family: \"Noto Sans Mono\", monospace;\n  }\n</style>"}
 db_schema:
   comments:
+    title: comments
     client: none
     server: full
     columns:
     - name: name
-      admin_ui: {width: 200, order: 0}
+      admin_ui: {width: 200}
       type: string
     - name: email
-      admin_ui: {width: 200, order: 1}
+      admin_ui: {width: 200}
       type: string
     - name: comment
-      admin_ui: {order: 2, width: 200}
+      admin_ui: {width: 200}
       type: string
     - name: created
-      admin_ui: {width: 200, order: 3}
+      admin_ui: {width: 200}
       type: datetime
-    title: comments
 renamed: true
