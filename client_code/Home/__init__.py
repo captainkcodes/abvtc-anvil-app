@@ -1,5 +1,7 @@
 from ._anvil_designer import HomeTemplate
 from anvil import *
+import anvil.google.auth, anvil.google.drive
+from anvil.google.drive import app_files
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
@@ -61,10 +63,8 @@ class Home(HomeTemplate):
 
   def logoutbtn_click(self, **event_args):
     """This method is called when the button is clicked"""
-    anvil.users.logout(invalidate_client_objects=False)
-    currentuser = anvil.users.get_user()
-    if currentuser:
-      self.logoutbtn.visible = False
-      self.viewacctbtn.visible = False
-      self.loginbtn.visible = True
-      Notification("Logout successful! Come back soon!").show()
+    anvil.users.logout()
+    Notification("Logout successful! Come back soon!").show()
+    self.logoutbtn.visible = False
+    self.viewacctbtn.visible = False
+    self.loginbtn.visible = True

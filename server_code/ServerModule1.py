@@ -1,3 +1,5 @@
+import anvil.google.auth, anvil.google.drive, anvil.google.mail
+from anvil.google.drive import app_files
 import anvil.email
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -37,3 +39,5 @@ def send_feedback(name, email, comment):
     created=datetime.now()
   )
 
+def getUserData():
+  app_tables.users.client_readable()
