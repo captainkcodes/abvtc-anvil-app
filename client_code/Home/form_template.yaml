@@ -22,7 +22,11 @@ components:
     type: Link
     event_bindings: {click: social_link_click}
   - name: merch_link
-    properties: {text: Merch}
+    properties: {role: null, url: 'https://shirtcrafters.square.site/', align: left,
+      tooltip: '', border: '', foreground: '', visible: true, text: Merch, font_size: null,
+      wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small, icon_align: left,
+      col_widths: '', spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
     type: Link
     event_bindings: {click: merch_link_click}
   - name: contact_link

@@ -38,8 +38,7 @@ class Home(HomeTemplate):
 
   def merch_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    self.container.clear()
-    self.container.add_component(Merch())
+    Notification("Redirecting to our third-party site sponsored by Shirt Crafters!").show()
 
   def contact_link_click(self, **event_args):
     """This method is called when the link is clicked"""

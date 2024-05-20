@@ -61,6 +61,22 @@ components:
       layout_properties: {grid_position: 'NQTPBQ,QWHHCJ'}
       data_bindings:
       - {property: text, code: 'self.item[''password_hash='']', writeback: true}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Last Login:', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_5
+      layout_properties: {grid_position: 'PWOQKI,IUKIHS'}
+    - type: TextBox
+      properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: false, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      name: lastlogin_box
+      layout_properties: {grid_position: 'PWOQKI,YXNHGQ'}
+      data_bindings:
+      - {property: text, code: 'self.item[''last_login='']', writeback: true}
   - name: label_2
     properties: {text: 'Feel free to make any changes:', bold: true, font_size: 18}
     type: Label
@@ -69,6 +85,7 @@ components:
     properties: {text: Update Account, role: filled-button}
     type: Button
     layout_properties: {grid_position: 'JSUTHV,OEFQFQ'}
+    event_bindings: {click: updateacctbtn_click}
   - name: label_3
     properties: {text: 'Don''t want your account anymore? Request account deletion
         here: ', font_size: 18, bold: true}
@@ -78,4 +95,5 @@ components:
     properties: {text: Request Account Delete, role: filled-button}
     type: Button
     layout_properties: {grid_position: 'SRRSXL,BCHCZJ'}
+    event_bindings: {click: acctdeletebtn_click}
 is_package: true
