@@ -47,6 +47,7 @@ components:
       underline: false, icon: ''}
     name: loginbtn
     layout_properties: {grid_position: 'GPZZVO,MRHPDK'}
+    event_bindings: {click: loginbtn_click}
   - type: Button
     properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Logout, font_size: null, font: '', spacing_above: small,
@@ -54,6 +55,7 @@ components:
       underline: false, icon: ''}
     name: logoutbtn
     layout_properties: {grid_position: 'AQRNRM,RMXQAE'}
+    event_bindings: {click: logoutbtn_click}
   - type: Button
     properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: View Account, font_size: null, font: '',
